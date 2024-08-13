@@ -23,10 +23,9 @@ CREATE TABLE Departaments (
 CREATE TABLE Customers (
     customerid INT   NOT NULL,
     first_name VARCHAR(30)   NOT NULL,
-    last_name VARCHAR(30)   NOT NULL,
+    second_name VARCHAR(30)   NOT NULL,
     ssn VARCHAR(9)  NOT NULL,
     date_of_birth DATE  NOT NULL,
-    address VARCHAR(255)   NOT NULL,
     phone_number VARCHAR(15)  NOT NULL,
     email VARCHAR(255)   NOT NULL,
     CONSTRAINT pk_Customers PRIMARY KEY (
@@ -75,7 +74,7 @@ CREATE TABLE Claims (
 CREATE TABLE Agents (
     agentID INT   NOT NULL,
     first_name VARCHAR(100)  NOT NULL,
-    last_name VARCHAR(100)  NOT NULL,
+    second_name VARCHAR(100)  NOT NULL,
     license_number VARCHAR(20)   NOT NULL,
     phone_number VARCHAR(15)   NOT NULL,
     email VARCHAR(255)   NOT NULL,
@@ -86,8 +85,8 @@ CREATE TABLE Agents (
 
 CREATE TABLE Policy_Agents (
     policy_agent_id INT   NOT NULL,
-    policy_id INT   NOT NULL,
-    agent_id INT   NOT NULL,
+    policyid INT   NOT NULL,
+    agentid INT   NOT NULL,
     CONSTRAINT pk_Policy_Agents PRIMARY KEY (
         policy_agent_id
      )
