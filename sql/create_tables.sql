@@ -53,7 +53,7 @@ CREATE TABLE Payments (
     payment_date DATE   NOT NULL,
     payment_amount DECIMAL(10,2)   NOT NULL,
     payment_method VARCHAR(50)   NOT NULL,
-    CONSTRAINT pk_Payments PRIMARY KEY (
+    CONSTRAINT pk_Payments  PRIMARY KEY (
         paymentID
      )
 );
